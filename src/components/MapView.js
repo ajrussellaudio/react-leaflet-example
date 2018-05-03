@@ -1,6 +1,6 @@
 import React from "react";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
-import "./leaflet.css";
+import "./MapView.css";
 
 const MarkerWithInfoWindow = ({ position }) => (
   <Marker position={position}>
