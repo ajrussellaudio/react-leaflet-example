@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Map, TileLayer } from "react-leaflet";
-import "./leaflet.css";
+import MapView from "./components/MapView";
 
 class App extends Component {
   state = {
@@ -11,12 +10,9 @@ class App extends Component {
 
   render() {
     return (
-      <Map center={[this.state.lat, this.state.lng]} zoom={this.state.zoom}>
-        <TileLayer
-          attribution={`<a href="http://osm.org/copyright">OpenStreetMap</a> contributors`}
-          url="http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-      </Map>
+      <React.Fragment>
+        <MapView {...this.state} />
+      </React.Fragment>
     );
   }
 }
